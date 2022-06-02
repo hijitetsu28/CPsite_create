@@ -1,0 +1,351 @@
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	opacity: 0.7;
+	transition: 0.5s;
+}
+
+/* ヘッダー */
+
+header {
+	width: 100%;
+	height: 70px;
+	position: fixed;
+	display: flex;
+	top: 0;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #fff;
+	z-index: 10;
+}
+
+.company-logo {
+	width: 71px;
+	margin-left: 30px;
+}
+
+.company-logo img {
+	width: 100%;
+}
+
+.company-logo img:hover {
+	opacity: 0.7;
+}
+
+.header-menu {
+	display: flex;
+	margin-right: 30px;
+}
+
+.header-menu__link {
+	margin-left: 30px;
+}
+
+.header-menu a {
+	color: #000;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+/* 社員ブログ・トップ */
+
+.blog-top {
+	position: relative;
+	margin-top: 70px;
+}
+
+.blog-top__img {
+	width: 100%;
+	height: 37vh;
+	background: url(../img/mv.png) center/cover;
+}
+
+.blog-top__ttl {
+	color: #fff;
+	font-size: 30px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/* 社員ブログ・メイン */
+
+.blog {
+	width: 100%;
+	margin: 100px 0 70px 0;
+}
+
+.blog__cotainer {
+	width: 85%;
+	margin: 20px auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.blog__card {
+	width: 100%;
+	margin-right: 20px;
+}
+
+.blog__card:nth-of-type(3) {
+	margin-right: 0;
+}
+
+.blog__card img {
+	width: 100%;
+	height: auto;
+}
+
+.blog__card p {
+	font-size: 14px;
+	color: #222222;
+	margin: 8px 0 5px 0;
+}
+
+.blog__card a {
+	font-size: 18px;
+	color: #000;
+	font-weight: bold;
+	line-height: 1.6;
+}
+
+.home-blog__link {
+	display: block;
+	margin: 40px auto 80px auto;
+	text-align: center;
+	padding: 15px 0;
+	width: 300px;
+	background-color: #CC0000;
+	color: #fff;
+	font-weight: bold;
+}
+
+/* 社員ブログ・お問い合わせ */
+
+.blog-contact {
+	width: 100%;
+	padding: 40px 0;
+	background-color: #f5f6f9;
+	text-align: center;
+}
+
+.blog-contact__ttl {
+	display: block;
+	font-size: 30px;
+	margin-top: 55px;
+	margin-bottom: 20px;
+}
+
+.blog-contact p {
+	display: inline-block;
+	line-height: 1.6;
+	margin: 0 40px;
+}
+
+.blog-contact__link {
+	display: block;
+	margin: 40px auto;
+	text-align: center;
+	padding: 14px 0;
+	width: 300px;
+	background-color: #CC0000;
+	color: #fff;
+	font-weight: bold;
+}
+
+/* フッター */
+
+.footer {
+	width: 100%;
+	padding: 24px 0;
+	background-color: #222222;
+	color: #fff;
+}
+
+.footer-inner {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 70px;
+}
+
+.copyright {
+	font-size: 12px;
+}
+
+.footer-nav ul {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.footer-nav a {
+	margin-left: 24px;
+	font-size: 12px;
+	color: #fff;
+	display: block;
+}
+
+.footer-nav__link {
+	position: relative;
+}
+
+.footer-nav__link::before {
+	content: "";
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	border-right: 1px solid #fff;
+	position: absolute;
+	top: 0;
+	right: 10;
+}
+
+.footer-nav__link:first-child:before {
+	border-right: none;
+}
+
+@media screen and (max-width: 768px) {
+
+	/* ヘッダー・ハンバーガーメニュー（レスポンシブ） */
+
+	.header-nav {
+		position: absolute;
+		height: 100vh;
+		width: 100%;
+		left: -100%;
+		top: 0;
+		background: #fefefe;
+		transition: 0.7s;
+	}
+
+	.header-menu {
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+		transform: translate(50%, 30%);
+	}
+
+	.header-menu__link {
+		list-style-type: none;
+		margin: 50px auto 0 auto;
+	}
+
+	.header-menu__link:first-of-type {
+		margin-top: 0;
+	}
+
+	.header-menu a {
+		width: 100%;
+		color: #0000cc;
+		font-size: 18px;
+		font-weight: normal;
+	}
+
+	.menu {
+		display: inline-block;
+		width: 36px;
+		height: 32px;
+		cursor: pointer;
+		position: fixed;
+		right: 30px;
+		align-items: center;
+		z-index: 10;
+	}
+
+	.menu__line--top,
+	.menu__line--middle,
+	.menu__line--bottom {
+		display: inline-block;
+		width: 100%;
+		height: 4px;
+		background-color: #000;
+		position: absolute;
+		transition: 0.5s;
+	}
+
+	.menu__line--top {
+		top: 0;
+	}
+
+	.menu__line--middle {
+		top: 14px;
+	}
+
+	.menu__line--bottom {
+		bottom: 0;
+	}
+
+	.menu.open span:nth-of-type(1) {
+		top: 14px;
+		transform: rotate(45deg);
+	}
+
+	.menu.open span:nth-of-type(2) {
+		opacity: 0;
+	}
+
+	.menu.open span:nth-of-type(3) {
+		top: 14px;
+		transform: rotate(-45deg);
+	}
+
+	.in {
+		transform: translateX(100%);
+	}
+
+	/* 社員ブログ・メイン（レスポンシブ） */
+
+	.blog {
+		margin-top: 80px;
+	}
+
+	.blog__cotainer {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.blog__card {
+		margin-bottom: 20px;
+		margin-right: 0;
+	}
+
+	.blog__card:last-of-type {
+		margin-bottom: 0;
+	}
+
+	/* フッター（レスポンシブ） */
+
+	.wrap {
+		width: 85%;
+		background-color: #222222;
+		color: #fff;
+		margin: 0 auto;
+	}
+
+	.copyright {
+		margin: 0 auto;
+	}
+
+	.footer-nav__link {
+		text-align: center;
+		margin-top: 17px;
+		width: 100%;
+	}
+
+	.footer-nav__link {
+		position: relative;
+	}
+
+	.footer-nav__link::before {
+		border-right: none;
+	}
+
+	.footer-nav a {
+		margin-left: 0;
+	}
+
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/dayjs"></script>
+  <script src="https://unpkg.com/dayjs@1.7.7/locale/ja.js"></script>
+  <title>株式会社TECH</title>
+  <link rel="stylesheet" href="CSS/reset.css">
+  <link rel="stylesheet" href="CSS/contact.css">
+</head>
+
+<body>
+  <header>
+    <a href="index.html" class="company-logo">
+      <img src="./img/logo.png" alt="logo">
+    </a>
+    <div class="menu" id="menu">
+      <span class="menu__line--top"></span>
+      <span class="menu__line--middle"></span>
+      <span class="menu__line--bottom"></span>
+    </div>
+    <nav class="header-nav" id="nav">
+      <ul class="header-menu" >
+        <li class="header-menu__link"><a href="index.html">ホーム</a></li>
+        <li class="header-menu__link"><a href="service.html">事業内容</a></li>
+        <li class="header-menu__link"><a href="news.html">ニュース</a></li>
+        <li class="header-menu__link"><a href="blog.html">社員ブログ</a></li>
+        <li class="header-menu__link"><a href="company.html">会社概要</a></li>
+        <li class="header-menu__link"><a href="recruit.html">採用情報</a></li>
+        <li class="header-menu__link"><a href="contact.html">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="contact-top">
+      <div class="contact-top__img"></div>
+      <h1 class="contact-top__ttl">お問い合わせ</h1>
+    </div>
+    <form class="contact-form">
+      <label for="company">
+        <h2 class="contact-form__ttl">会社名</h2>
+        <input type="text" name="company" id="company" class="contact-input">
+      </label>
+      <label for="name">
+        <h2 class="contact-form__ttl">お名前<span class="mandatory">*</span></h2>
+        <input type="text" name="name" id="name" class="contact-input" required>
+      </label>
+      <label for="email">
+        <h2 class="contact-form__ttl">メールアドレス<span class="mandatory">*</span></h2>
+        <input type="email" name="email" id="email" class="contact-input" required>
+      </label>
+      <label for="textarea">
+      <h2>お問い合わせ内容<span class="mandatory">*</span></h2>
+      <textarea name="textarea" id="textarea" class="textarea contact-input" required></textarea>
+      </label>
+      <div class="contact-form__btn">
+        <input type="submit" value="お申し込み" class="input-btn">
+      </div>
+    </form>
+  </main>
+  <footer class="footer">
+    <div class="footer-inner wrap">
+      <small class="copyright">&copy; 2020 TECH inc.</small>
+      <nav class="footer-nav" id="nav">
+        <ul>
+          <li class="footer-nav__link"><a href="index.html">ホーム</a></li>
+          <li class="footer-nav__link"><a href="service.html">事業内容</a></li>
+          <li class="footer-nav__link"><a href="news.html">ニュース</a></li>
+          <li class="footer-nav__link"><a href="blog.html">社員ブログ</a></li>
+          <li class="footer-nav__link"><a href="company.html">会社概要</a></li>
+          <li class="footer-nav__link"><a href="recruit.html">採用情報</a></li>
+          <li class="footer-nav__link"><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

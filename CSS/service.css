@@ -1,0 +1,333 @@
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	opacity: 0.7;
+	transition: 0.5s;
+}
+
+/* ヘッダー */
+
+header {
+	width: 100%;
+	height: 70px;
+	position: fixed;
+	display: flex;
+	top: 0;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #fff;
+	z-index: 10;
+}
+
+.company-logo {
+	width: 71px;
+	margin-left: 30px;
+}
+
+.company-logo img {
+	width: 100%;
+}
+
+.company-logo img:hover {
+	opacity: 0.7;
+}
+
+.header-menu {
+	display: flex;
+	margin-right: 30px;
+}
+
+.header-menu__link {
+	margin-left: 30px;
+}
+
+.header-menu a {
+	color: #000;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+/* 業務内容・トップ */
+
+.service-top {
+	position: relative;
+	margin-top: 70px;
+}
+
+.service-top__img {
+	width: 100%;
+	height: 37vh;
+	background: url(../img/mv.png) center/cover;
+}
+
+.service-top__ttl {
+	color: #fff;
+	font-size: 30px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/* 事業内容・メイン */
+
+.service-main {
+	width: 85%;
+	margin: 76px auto;
+}
+
+.service-main__container {
+	width: 100%;
+	height: 222px;
+	display: flex;
+	border-top: 1px solid #222222;
+}
+
+.service-main__container img {
+	width: 290px;
+	height: 175px;
+	margin: 20px 0;
+}
+
+.service-main__text {
+	width: 100%;
+	height: 175px;
+	margin: auto 0 auto 40px;
+	line-height: 1.6;
+}
+
+.service-main__text h2 {
+	font-size: 24px;
+}
+
+.service-main__container:last-child {
+	border-bottom: 1px solid #222222;
+}
+
+/* 事業内容・お問い合わせ */
+
+.service-contact {
+	width: 100%;
+	padding: 40px 0;
+	background-color: #f5f6f9;
+	text-align: center;
+}
+
+.service-contact__ttl {
+	display: block;
+	font-size: 30px;
+	margin-top: 55px;
+	margin-bottom: 20px;
+}
+
+.service-contact p {
+	display: inline-block;
+	line-height: 1.6;
+	margin: 0 40px;
+}
+
+.service-contact__link {
+	display: block;
+	margin: 40px auto;
+	text-align: center;
+	padding: 14px 0;
+	width: 300px;
+	background-color: #CC0000;
+	color: #fff;
+	font-weight: bold;
+}
+
+/* フッター */
+
+.footer {
+	width: 100%;
+	padding: 24px 0;
+	background-color: #222222;
+	color: #fff;
+}
+
+.footer-inner {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 70px;
+}
+
+.copyright {
+	font-size: 12px;
+}
+
+.footer-nav ul {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.footer-nav a {
+	margin-left: 24px;
+	font-size: 12px;
+	color: #fff;
+	display: block;
+}
+
+.footer-nav__link {
+	position: relative;
+}
+
+.footer-nav__link::before {
+	content: "";
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	border-right: 1px solid #fff;
+	position: absolute;
+	top: 0;
+	right: 10;
+}
+
+.footer-nav__link:first-child:before {
+	border-right: none;
+}
+
+@media screen and (max-width: 768px) {
+
+	/* ヘッダー・ハンバーガーメニュー（レスポンシブ） */
+
+	.header-nav {
+		position: absolute;
+		height: 100vh;
+		width: 100%;
+		left: -100%;
+		top: 0;
+		background: #fefefe;
+		transition: 0.7s;
+	}
+
+	.header-menu {
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+		transform: translate(50%, 30%);
+	}
+
+	.header-menu__link {
+		list-style-type: none;
+		margin: 50px auto 0 auto;
+	}
+
+	.header-menu__link:first-of-type {
+		margin-top: 0;
+	}
+
+	.header-menu a {
+		width: 100%;
+		color: #0000cc;
+		font-size: 18px;
+		font-weight: normal;
+	}
+
+	.menu {
+		display: inline-block;
+		width: 36px;
+		height: 32px;
+		cursor: pointer;
+		position: fixed;
+		right: 30px;
+		align-items: center;
+		z-index: 10;
+	}
+
+	.menu__line--top,
+	.menu__line--middle,
+	.menu__line--bottom {
+		display: inline-block;
+		width: 100%;
+		height: 4px;
+		background-color: #000;
+		position: absolute;
+		transition: 0.5s;
+	}
+
+	.menu__line--top {
+		top: 0;
+	}
+
+	.menu__line--middle {
+		top: 14px;
+	}
+
+	.menu__line--bottom {
+		bottom: 0;
+	}
+
+	.menu.open span:nth-of-type(1) {
+		top: 14px;
+		transform: rotate(45deg);
+	}
+
+	.menu.open span:nth-of-type(2) {
+		opacity: 0;
+	}
+
+	.menu.open span:nth-of-type(3) {
+		top: 14px;
+		transform: rotate(-45deg);
+	}
+
+	.in {
+		transform: translateX(100%);
+	}
+
+	/* 事業内容・メイン（レスポンシブ） */
+
+	.service-main__container {
+		display: flex;
+		flex-wrap: wrap;
+		height: auto;
+	}
+
+	.service-main__container img {
+		width: 100%;
+		height: auto;
+		margin-bottom: 6px;
+	}
+
+	.service-main__text {
+		margin: 0 0 20px 0;
+		height: auto;
+	}
+
+	/* フッター（レスポンシブ） */
+
+	.wrap {
+		width: 85%;
+		background-color: #222222;
+		color: #fff;
+		margin: 0 auto;
+	}
+
+	.copyright {
+		margin: 0 auto;
+	}
+
+	.footer-nav__link {
+		text-align: center;
+		margin-top: 17px;
+		width: 100%;
+	}
+
+	.footer-nav__link {
+		position: relative;
+	}
+
+	.footer-nav__link::before {
+		border-right: none;
+	}
+
+	.footer-nav a {
+		margin-left: 0;
+	}
+
+}
